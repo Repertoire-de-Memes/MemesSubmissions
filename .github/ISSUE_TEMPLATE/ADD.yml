@@ -1,0 +1,40 @@
+name: Ajoute de memes
+description: Ajouter un meme à la liste
+title: "Ajout : "
+labels: ["addition"]
+assignees:
+  - NetherMCtv
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de participer en ajoutant ce meme !
+  - type: input
+    id: name
+    attributes:
+      label: Nom du meme
+      description: Le nom du meme
+    validations:
+      required: true
+  - type: input
+    id: keywords
+    attributes:
+      label: Les mots-clés
+      description: Pour rechercher ce meme, vous auriez utilisé quel(s) mots-clé(s) ?
+    validations:
+      required: true
+  - type: input
+    id: file
+    attributes:
+      label: Fichier
+      description: Comme GitHub n'a pas d'option pour importer des fichiers, mettez le lien vers un meme (ex. une vidéo YouTube, un lien Imgur, etc)
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: En ajoutant ce meme, je respecte les [Terms of Service](https://docs.github.com/en/github/site-policy/github-terms-of-service) de GitHub
+      options:
+        - label: J'approuve
+          required: true
